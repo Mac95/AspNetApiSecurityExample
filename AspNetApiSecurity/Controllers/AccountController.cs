@@ -50,6 +50,7 @@ namespace AspNetApiSecurity.Controllers
         {
             try
             {
+                // create new instance of controller
                 ApiAccountController cnt = new ApiAccountController();
                 var result = await cnt.PostLogin(model);
                 var ok = result as System.Web.Http.Results.OkNegotiatedContentResult<LoginViewModel>;
